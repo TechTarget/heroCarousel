@@ -25,6 +25,7 @@ http://www.opensource.org/licenses/mit-license.php
     autoplaySpeed: 5000
     itemsToShow: 3
     heroImageLink: true
+    showHeroText: true
     navigation: true
     navigationPosition: 'Outside' # Inline or Outside
     counter: false
@@ -40,6 +41,7 @@ http://www.opensource.org/licenses/mit-license.php
       @el = $(@element)
       @container = @el.children('.heroCarouselWindow').children('ul')
       @heroImage = @container.find('.heroCarouselImage')
+      @heroText = @container.find('.heroCarouselContent')
       @items = @container.find('> li')
       @itemCount = @items.size()
       @itemWidth = @items.outerWidth()
@@ -70,8 +72,13 @@ http://www.opensource.org/licenses/mit-license.php
         @renderControls()
         @bindEvents()
 
-      # heroImageLink enabled
-      @removeLink() if !@options.heroImageLink
+      # hide the text that appears on top of the hero image
+      if not @options.showHeroText
+        @heroText.hide()
+
+      # remove the link that wraps around the hero image
+      if not @options.heroImageLink
+        @removeLink()
 
     # play: ->
 

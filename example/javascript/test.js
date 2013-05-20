@@ -18,6 +18,7 @@ $(document).on('ready', function() {
   $('.heroCarousel').eq(0).heroCarousel({
     navigationPosition: 'Outside',
     heroImageLink: true,
+    showHeroText: true,
     itemsToShow: 1,
     autoplay: true,
     autoplaySpeed: 5000
@@ -26,12 +27,14 @@ $(document).on('ready', function() {
   $('.heroCarousel').eq(1).heroCarousel({
     pagination: false,
     navigationPosition: 'Outside',
+    showHeroText: false,
     heroImageLink: false,
     itemsToShow: 1
   });
 
   $('.heroCarousel').eq(2).heroCarousel({
     navigation: false,
+    showHeroText: false,
     heroImageLink: false,
     itemsToShow: 1
   });

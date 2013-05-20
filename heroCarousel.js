@@ -23,6 +23,7 @@ http://www.opensource.org/licenses/mit-license.php
       autoplaySpeed: 5000,
       itemsToShow: 3,
       heroImageLink: true,
+      showHeroText: true,
       navigation: true,
       navigationPosition: 'Outside',
       counter: false,
@@ -37,6 +38,7 @@ http://www.opensource.org/licenses/mit-license.php
         this.el = $(this.element);
         this.container = this.el.children('.heroCarouselWindow').children('ul');
         this.heroImage = this.container.find('.heroCarouselImage');
+        this.heroText = this.container.find('.heroCarouselContent');
         this.items = this.container.find('> li');
         this.itemCount = this.items.size();
         this.itemWidth = this.items.outerWidth();
@@ -66,6 +68,9 @@ http://www.opensource.org/licenses/mit-license.php
           }
           this.renderControls();
           this.bindEvents();
+        }
+        if (!this.options.showHeroText) {
+          this.heroText.hide();
         }
         if (!this.options.heroImageLink) {
           return this.removeLink();
