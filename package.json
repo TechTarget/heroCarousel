@@ -1,0 +1,8 @@
+{
+  "name": "heroCarousel",
+  "main": "heroCarousel",
+  "description": "jQuery plugin for hero-image carousel",
+  "version": "1.0.1",
+  "author": "Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)",
+  "license": "MIT"
+}

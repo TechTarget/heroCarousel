@@ -1,0 +1,17 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "strict": false,
+  "trailing": true,
+  "undef": true,
+  "browser": true,
+  "jquery": true,
+  "predef" : {
+    "console" : true,
+    "define" : true
+  }
+}

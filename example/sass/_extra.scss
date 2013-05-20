@@ -1,0 +1,27 @@
+#micrositeContentColumnLeft, #micrositeContentColumnRight {
+  border: none;
+  background: none;
+  padding: 0;
+  .heroCarouselContent {
+    // display: block;
+  }
+}
+
+#micrositeContentColumnLeft {
+  margin: 0 0 0 20px;
+  width: 620px;
+  .heroCarouselPrevious, .heroCarouselNext {
+    height: 173px;
+  }
+  .heroCarouselPrevious {
+    left: 10px;
+  }
+  .heroCarouselNext {
+    right: 10px;
+  }
+}
+
+#micrositeContentColumnRight {
+  margin: 0 20px 0 0;
+  width: 280px;
+}
