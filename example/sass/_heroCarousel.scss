@@ -2,12 +2,12 @@
 @import "compass";
 
 // component
-$hc-show-text-over-image: false;
+$hc-show-text-over-image: true;
 $hc-transition-speed: .5s;
 $hc-hero-image-border: #bbb;
 $hc-hero-image-width: 938px;
 $hc-hero-image-height: 298px;
-
+$hc-button-color: #1c3e60;
 
 .heroCarousel {
   position: relative;
@@ -59,26 +59,32 @@ $hc-hero-image-height: 298px;
       display: none;
     }
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40px;
+    right: 20px;
     width: 600px;
-    background-color: green;
-    color: white;
+    color: #000;
 
     .heroCarouselHeader {
       margin: 0 0 5px;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 36px;
     }
 
     .heroCarouselText {
-      font-size: 12px;
-      line-height: 1.6;
-      margin: 0 0 5px !important;
+      font-size: 18px;
     }
 
     .heroCarouselButton {
-      border: 1px solid red;
+      display: inline-block;
+      background-color: $hc-button-color;
+
+      a {
+        color: #fff;
+        line-height: 25px;
+        font-size: 12px;
+        padding: 0 15px;
+        text-transform: uppercase;
+      }
     }
 
   }

@@ -237,26 +237,30 @@ a:focus {
   height: 298px;
 }
 .heroCarousel .heroCarouselContent {
-  display: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 40px;
+  right: 20px;
   width: 600px;
-  background-color: green;
-  color: white;
+  color: #000;
 }
 .heroCarousel .heroCarouselContent .heroCarouselHeader {
   margin: 0 0 5px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 36px;
 }
 .heroCarousel .heroCarouselContent .heroCarouselText {
-  font-size: 12px;
-  line-height: 1.6;
-  margin: 0 0 5px !important;
+  font-size: 18px;
 }
 .heroCarousel .heroCarouselContent .heroCarouselButton {
-  border: 1px solid red;
+  display: inline-block;
+  background-color: #1c3e60;
+}
+.heroCarousel .heroCarouselContent .heroCarouselButton a {
+  color: #fff;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 0 15px;
+  text-transform: uppercase;
 }
 .heroCarousel .heroCarouselControls {
   clear: both;
@@ -368,6 +372,9 @@ a:focus {
   margin: 0 0 0 20px;
   width: 620px;
 }
+#micrositeContentColumnLeft .heroCarouselContent {
+  width: 300px;
+}
 #micrositeContentColumnLeft .heroCarouselPrevious, #micrositeContentColumnLeft .heroCarouselNext {
   height: 173px;
 }
@@ -381,4 +388,7 @@ a:focus {
 #micrositeContentColumnRight {
   margin: 0 20px 0 0;
   width: 280px;
+}
+#micrositeContentColumnRight .heroCarouselContent {
+  width: 150px;
 }

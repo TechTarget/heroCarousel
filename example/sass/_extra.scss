@@ -10,6 +10,11 @@
 #micrositeContentColumnLeft {
   margin: 0 0 0 20px;
   width: 620px;
+
+  .heroCarouselContent {
+    width: 300px;
+  }
+
   .heroCarouselPrevious, .heroCarouselNext {
     height: 173px;
   }
@@ -24,4 +29,9 @@
 #micrositeContentColumnRight {
   margin: 0 20px 0 0;
   width: 280px;
+
+  .heroCarouselContent {
+    width: 150px;
+  }
+
 }
