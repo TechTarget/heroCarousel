@@ -1,1 +1,139 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Hero Carousel Component Tests</title><link rel="stylesheet" href="css/style.css" media="screen"><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="../heroCarousel.js"></script><script src="javascript/test.js"></script></head><body><div id="micrositeContainer"><div id="micrositeContainerInner"><div id="micrositeContainerCompress"><div id="micrositeHeader"><h2>Header</h2></div><div id="micrositeContent"><div id="micrositeContentColumnFull"><div class="heroCarousel"><div class="heroCarouselWindow"><ul><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li></ul></div></div></div><div id="micrositeContentColumnLeft"><div class="heroCarousel"><div class="heroCarouselWindow"><ul><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li></ul></div></div></div><div id="micrositeContentColumnRight"><div class="heroCarousel"><div class="heroCarouselWindow"><ul><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li><li><div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div><div class="heroCarouselContent"><div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div><div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div><div class="heroCarouselButton"><a href="">View Now &gt;</a></div></div></li></ul></div></div></div></div><div id="micrositeFooter"><h2>Footer</h2></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hero Carousel Component Tests</title>
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../heroCarousel.js"></script>
+    <script src="javascript/test.js"></script>
+  </head>
+  <body>
+    <div id="micrositeContainer">
+      <div id="micrositeContainerInner">
+        <div id="micrositeContainerCompress">
+          <div id="micrositeHeader">
+            <h2>Header</h2>
+          </div>
+          <div id="micrositeContent">
+            <div id="micrositeContentColumnFull">
+              <div class="heroCarousel">
+                <div class="heroCarouselWindow">
+                  <ul>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/938x298/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="micrositeContentColumnLeft">
+              <div class="heroCarousel">
+                <div class="heroCarouselWindow">
+                  <ul>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/618x173/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="micrositeContentColumnRight">
+              <div class="heroCarousel">
+                <div class="heroCarouselWindow">
+                  <ul>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="heroCarouselImage"><a href="replaceMe"><img data-src="example.com/278x368/mo"></a></div>
+                      <div class="heroCarouselContent">
+                        <div class="heroCarouselHeader">@Html.Ipsum.h4(4)</div>
+                        <div class="heroCarouselText">@Html.Ipsum.p(1, 3)</div>
+                        <div class="heroCarouselButton"><a href="">View Now &gt;</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="micrositeFooter">
+            <h2>Footer</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
