@@ -1,13 +1,19 @@
 @import "compass/css3/transition";
+@import "compass/css3/border-radius";
 @import "compass";
 
 // component
 $hc-show-text-over-image: true;
+$hc-text-bgColor: #000;
+$hc-text-color: #fff;
+$hc-text-width: 500px;
+$hc-text-height: 200px;
 $hc-transition-speed: .5s;
 $hc-hero-image-border: #bbb;
 $hc-hero-image-width: 938px;
 $hc-hero-image-height: 298px;
-$hc-button-color: #1c3e60;
+$hc-button-bgColor: #1c3e60;
+$hc-button-color: #fff;
 
 .heroCarousel {
   position: relative;
@@ -32,7 +38,7 @@ $hc-button-color: #1c3e60;
 
       li {
         position: relative;
-        display: block;
+        display: table;
         float: left;
         white-space: normal;
       }
@@ -59,10 +65,17 @@ $hc-button-color: #1c3e60;
       display: none;
     }
     position: absolute;
-    top: 40px;
-    right: 20px;
-    width: 600px;
-    color: #000;
+    background-color: $hc-text-bgColor;
+    color: $hc-text-color;
+    top: 30px;
+    right: 0;
+    width: $hc-text-width;
+    height: $hc-text-height;
+    padding: 20px;
+
+    &.flip {
+      left: 0;
+    }
 
     .heroCarouselHeader {
       margin: 0 0 5px;
@@ -75,15 +88,14 @@ $hc-button-color: #1c3e60;
     }
 
     .heroCarouselButton {
-      display: inline-block;
-      background-color: $hc-button-color;
-
       a {
-        color: #fff;
+        @include border-radius(5px);
+        display: inline-block;
+        background-color: $hc-button-bgColor;
+        color: $hc-button-color;
         line-height: 25px;
         font-size: 12px;
-        padding: 0 15px;
-        text-transform: uppercase;
+        padding: 3px 15px 0;
       }
     }
 

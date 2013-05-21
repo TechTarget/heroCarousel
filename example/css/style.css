@@ -225,7 +225,7 @@ a:focus {
 }
 .heroCarousel .heroCarouselWindow ul li {
   position: relative;
-  display: block;
+  display: table;
   float: left;
   white-space: normal;
 }
@@ -238,10 +238,16 @@ a:focus {
 }
 .heroCarousel .heroCarouselContent {
   position: absolute;
-  top: 40px;
-  right: 20px;
-  width: 600px;
-  color: #000;
+  background-color: black;
+  color: white;
+  top: 30px;
+  right: 0;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+}
+.heroCarousel .heroCarouselContent.flip {
+  left: 0;
 }
 .heroCarousel .heroCarouselContent .heroCarouselHeader {
   margin: 0 0 5px;
@@ -251,16 +257,18 @@ a:focus {
 .heroCarousel .heroCarouselContent .heroCarouselText {
   font-size: 18px;
 }
-.heroCarousel .heroCarouselContent .heroCarouselButton {
+.heroCarousel .heroCarouselContent .heroCarouselButton a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   display: inline-block;
   background-color: #1c3e60;
-}
-.heroCarousel .heroCarouselContent .heroCarouselButton a {
-  color: #fff;
+  color: white;
   line-height: 25px;
   font-size: 12px;
-  padding: 0 15px;
-  text-transform: uppercase;
+  padding: 3px 15px 0;
 }
 .heroCarousel .heroCarouselControls {
   clear: both;
