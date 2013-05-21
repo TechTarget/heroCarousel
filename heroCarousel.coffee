@@ -81,8 +81,10 @@ http://www.opensource.org/licenses/mit-license.php
         @removeLink()
 
     # play: ->
+    #   console.log 'autoplay'
 
     # pause: ->
+    #   console.log 'pause'
 
     # event hooks for the controls
     bindEvents: ->
