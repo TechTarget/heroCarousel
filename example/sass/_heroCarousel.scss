@@ -1,19 +1,6 @@
 @import "compass/css3/transition";
 @import "compass/css3/border-radius";
-@import "compass";
-
-// component
-$hc-show-text-over-image: true;
-$hc-text-bgColor: #000;
-$hc-text-color: #fff;
-$hc-text-width: 500px;
-$hc-text-height: 200px;
-$hc-transition-speed: .5s;
-$hc-hero-image-border: #bbb;
-$hc-hero-image-width: 938px;
-$hc-hero-image-height: 298px;
-$hc-button-bgColor: #1c3e60;
-$hc-button-color: #fff;
+@import "compass/css3/images";
 
 .heroCarousel {
   position: relative;
@@ -38,7 +25,6 @@ $hc-button-color: #fff;
 
       li {
         position: relative;
-        display: table;
         float: left;
         white-space: normal;
       }
@@ -61,41 +47,49 @@ $hc-button-color: #fff;
   }
 
   .heroCarouselContent {
+    display: table;
     @if $hc-show-text-over-image == false {
       display: none;
     }
     position: absolute;
     background-color: $hc-text-bgColor;
     color: $hc-text-color;
-    top: 30px;
+    margin: $hc-text-margin 0;
+    top: 0;
     right: 0;
     width: $hc-text-width;
-    height: $hc-text-height;
-    padding: 20px;
-
+    height: $hc-text-height - ($hc-text-margin * 2);
     &.flip {
       left: 0;
     }
 
-    .heroCarouselHeader {
-      margin: 0 0 5px;
-      font-weight: bold;
-      font-size: 36px;
-    }
+    .heroCarouselContentInner {
+      padding: 25px;
+      display: table-cell;
+      vertical-align: $hc-text-valign;
 
-    .heroCarouselText {
-      font-size: 18px;
-    }
+      .heroCarouselHeader {
+        margin: 0 0 15px;
+        font-size: 22px;
+        line-height: 1.4;
+      }
 
-    .heroCarouselButton {
-      a {
-        @include border-radius(5px);
-        display: inline-block;
-        background-color: $hc-button-bgColor;
-        color: $hc-button-color;
-        line-height: 25px;
-        font-size: 12px;
-        padding: 3px 15px 0;
+      .heroCarouselText {
+        font-size: 15px;
+        margin: 0 0 15px;
+      }
+
+      .heroCarouselButton {
+        a {
+          @include border-radius(5px);
+          display: inline-block;
+          background-color: $hc-button-bgColor;
+          color: $hc-button-color !important;
+          line-height: 25px;
+          font-size: 12px;
+          padding: 1px 15px 0;
+        }
+
       }
     }
 
@@ -129,7 +123,7 @@ $hc-button-color: #fff;
     }
 
     &:focus {
-      background-color: transparent;
+      background-color: transparent !important;
     }
 
   }
@@ -143,7 +137,7 @@ $hc-button-color: #fff;
     }
 
     &:focus {
-      background-color: transparent;
+      background-color: transparent !important;
     }
 
   }
