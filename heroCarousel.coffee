@@ -1,5 +1,5 @@
 ###!
-heroCarousel v1.0.1 (http://okize.github.com/)
+heroCarousel v1.0.2 (http://okize.github.com/)
 Copyright (c) 2013 | Licensed under the MIT license
 http://www.opensource.org/licenses/mit-license.php
 ###
@@ -20,16 +20,16 @@ http://www.opensource.org/licenses/mit-license.php
 
   # default plugin options
   defaults =
-    autoplayPauseOnHover: true
     autoplay: false
     autoplaySpeed: 5000
+    autoplayPauseOnHover: true
     itemsToShow: 3
     heroImageLink: true
     showHeroText: true
-    navigation: true
-    navigationPosition: 'Outside' # Inline or Outside
     counter: false
     pagination: true
+    navigation: true
+    navigationPosition: 'Outside' # Inline or Outside
 
   # plugin constructor
   class Plugin
@@ -51,6 +51,7 @@ http://www.opensource.org/licenses/mit-license.php
       @itemGroupTotal = Math.ceil(@itemCount / @itemsToShow)
       @itemGroupShowing = 0
       @showControls = @options.navigation or @options.pagination
+      @timer = null
       @init()
 
     # initialize plugin
@@ -80,11 +81,40 @@ http://www.opensource.org/licenses/mit-license.php
       if not @options.heroImageLink
         @removeLink()
 
-    # play: ->
-    #   console.log 'autoplay'
+      # if autoplay enabled kick-start it here
+      if @options.autoplay
+        @autoplayStart()
 
-    # pause: ->
-    #   console.log 'pause'
+        # pause the autoplay when users mouse is over the carousel
+        if @options.autoplayPauseOnHover
+          @el.on(
+            mouseenter: =>
+              @autoplayStop()
+            ,
+            mouseleave: =>
+              @autoplayStart()
+          )
+
+    # initialize autoplay
+    autoplayStart: ->
+      @timer = setInterval(
+        $.proxy(@autoplayMove, this ),
+        @options.autoplaySpeed
+      )
+      return
+
+    # trigger slide
+    autoplayMove: ->
+      if @itemGroupShowing < (@itemGroupTotal - 1)
+        @itemGroupShowing++
+      else
+        @itemGroupShowing = 0
+      @updateControlsState()
+      @moveItems()
+
+    # stop autoplay
+    autoplayStop: ->
+      clearTimeout @timer
 
     # event hooks for the controls
     bindEvents: ->
@@ -221,8 +251,9 @@ http://www.opensource.org/licenses/mit-license.php
       # updates the navigation buttons
       if @options.navigation
 
-        nav =
-          @el.find('.heroCarouselPrevious, .heroCarouselNext').removeClass('disabled')
+        nav = @el
+                .find('.heroCarouselPrevious, .heroCarouselNext')
+                .removeClass('disabled')
 
         # disable previous button
         if @itemGroupShowing is 0

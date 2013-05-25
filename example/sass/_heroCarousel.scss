@@ -2,6 +2,21 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/images";
 
+// hero carousel component
+$hc-show-text-over-image: true;
+$hc-transition-speed: .5s;
+$hc-hero-image-border: #bbb;
+$hc-hero-image-width: 938px;
+$hc-hero-image-height: 298px;
+$hc-text-bgColor: #000;
+$hc-text-color: #fff;
+$hc-text-width: 500px;
+$hc-text-margin: 20px;
+$hc-text-height: $hc-hero-image-height;
+$hc-text-valign: middle;
+$hc-button-bgColor: #1c3e60;
+$hc-button-color: #fff;
+
 .heroCarousel {
   position: relative;
   margin: 0 0 25px;
@@ -209,12 +224,16 @@
   }
 
   .heroCarouselNavigationCounter {
-    color: #fff;
-    background-color: #333;
-    padding: 2px 4px;
+    color: #000;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 2px 0;
     position: absolute;
     top: -10px;
-    right: -20px;
+    left: 110px;
+    text-align: center;
+    width: 60px;
   }
 
 }

@@ -240,10 +240,11 @@ a:focus {
   position: absolute;
   background-color: black;
   color: white;
+  margin: 20px 0;
   top: 0;
   right: 0;
   width: 500px;
-  height: 298px;
+  height: 258px;
 }
 .heroCarousel .heroCarouselContent.flip {
   left: 0;
@@ -254,12 +255,13 @@ a:focus {
   vertical-align: middle;
 }
 .heroCarousel .heroCarouselContent .heroCarouselContentInner .heroCarouselHeader {
-  margin: 0 0 5px;
-  font-weight: bold;
-  font-size: 36px;
+  margin: 0 0 15px;
+  font-size: 22px;
+  line-height: 1.4;
 }
 .heroCarousel .heroCarouselContent .heroCarouselContentInner .heroCarouselText {
-  font-size: 18px;
+  font-size: 15px;
+  margin: 0 0 15px;
 }
 .heroCarousel .heroCarouselContent .heroCarouselContentInner .heroCarouselButton a {
   -webkit-border-radius: 5px;
@@ -269,10 +271,10 @@ a:focus {
   border-radius: 5px;
   display: inline-block;
   background-color: #1c3e60;
-  color: white;
+  color: white !important;
   line-height: 25px;
   font-size: 12px;
-  padding: 3px 15px 0;
+  padding: 1px 15px 0;
 }
 .heroCarousel .heroCarouselControls {
   clear: both;
@@ -299,7 +301,7 @@ a:focus {
   cursor: default;
 }
 .heroCarousel .heroCarouselPrevious:focus {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .heroCarousel .heroCarouselNext {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NTJDOTA0RUMyQjIwNjgxMTgwODNENjQ3Nzg2MzMyMUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzAyQzc3Q0VDMDI4MTFFMkEwNjVCQjc2QzA2MUFFRDMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzAyQzc3Q0RDMDI4MTFFMkEwNjVCQjc2QzA2MUFFRDMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAyODAxMTc0MDcyMDY4MTE4MDgzQ0I3NkY3MURCRTJFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUyQzkwNEVDMkIyMDY4MTE4MDgzRDY0Nzc4NjMzMjFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++iGkfQAAAytJREFUeNpi/P//PwMJwAaKbYFYAoh1oeKXgfgFEB8G4iNQTBwAOYAAFgXiRiC+8Z94cAOqR5SQ+YQszwfi5//JB8+hZpDlgFX/qQdW4bKHEUsaEATiFUDshi7x7uMXhj3HLzLsO3mZ4fX7Twy3HjwFi6spSDOICvIxOJnrMrhY6jMI8fNgi+1dQBwBxO+RBbE5YCe65Z+/fmeYtnw7w5ItBxl+//mLN02xsjAzxPjYM2RFejLwcnNic4Q7PgfMA+JEZIFLtx4yZDXPZHgD9DEpQAQYItNq0xn01OTRpRYBcTw2ByQD8RxklaCgLuqcx/Dj128GcgAHGytDX3kSOGrQQDoQz0J3wHkgNoBxbj14xhBW1E225ciOWNVXCkwnUsjCF4DYEMRgggqUIlsOsjSndTbFlsPMAkXhtx8/kYUNoHbCHRCOLLt080GGR89fM1ALPHn5lmH51sPowuEwB4AiyBjZxbPW7MJrYFVaCMPijnyGQBcLoh0BMhMtREF2ajFBy3Y42HPsIsPHz9/wGqapJM1gqqPK0F4Qw9BRGEuUA0BmgsxGr1uYoBULHBw4c4WgYW2z1oLLBhAIcDYn2hGHz11DF7JlQk58IHDj3hOCBl0HqomrnEiyI67eeYQuZAxyAEr+ePn2I1G+IccRz169RxeSAzmAH73YJRaAHNE2ey2cD3IEPoCWFUGAG+QAFC9jKb/xJEYZhqrUYDh/w96TeNVzcbCjC30FOeAZsoi4MD/Rli9qz4c7GGR5Rf9ivHqkxATRhR4xQYtFONAAGkwLy3GYfYEJ2o6DAwcTHYIGVaUFk2w5DrMPs6A3IJ0sdBn4ebnwFkbX70EaIuv2nGRYv+cEUZaDzASZjQaOwGpDlJpw7to9DN3zNzBQE5QmBjAkB7tg1IiwymgZskykty2DjLgw1SwHmQUyEw0sQ64Nu5ETIyi7TK5OBdfllAKQGSCz0LLgBaidcAeAwHT0lN5dmkCRI0B6QWZoYqb+6bjahAuBOG6g2oSDolUMdjyoUURMvwBWu2mryBHbL4gG4jfE9g3p0jMa1H1DuvSOGSkcHzCCip8jd3wAIMAADEfjxHXJXyAAAAAASUVORK5CYII=);
@@ -309,7 +311,7 @@ a:focus {
   cursor: default;
 }
 .heroCarousel .heroCarouselNext:focus {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .heroCarousel.heroCarouselNavigationOutside .heroCarouselPrevious, .heroCarousel.heroCarouselNavigationOutside .heroCarouselNext {
   position: absolute;
@@ -366,12 +368,16 @@ a:focus {
   background-color: transparent;
 }
 .heroCarousel .heroCarouselNavigationCounter {
-  color: #fff;
-  background-color: #333;
-  padding: 2px 4px;
+  color: #000;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 2px 0;
   position: absolute;
   top: -10px;
-  right: -20px;
+  left: 110px;
+  text-align: center;
+  width: 60px;
 }
 
 #micrositeContentColumnLeft, #micrositeContentColumnRight {

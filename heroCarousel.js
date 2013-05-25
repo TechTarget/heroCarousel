@@ -1,5 +1,5 @@
 /*!
-heroCarousel v1.0.1 (http://okize.github.com/)
+heroCarousel v1.0.2 (http://okize.github.com/)
 Copyright (c) 2013 | Licensed under the MIT license
 http://www.opensource.org/licenses/mit-license.php
 */
@@ -18,16 +18,16 @@ http://www.opensource.org/licenses/mit-license.php
 
     pluginName = 'heroCarousel';
     defaults = {
-      autoplayPauseOnHover: true,
       autoplay: false,
       autoplaySpeed: 5000,
+      autoplayPauseOnHover: true,
       itemsToShow: 3,
       heroImageLink: true,
       showHeroText: true,
-      navigation: true,
-      navigationPosition: 'Outside',
       counter: false,
-      pagination: true
+      pagination: true,
+      navigation: true,
+      navigationPosition: 'Outside'
     };
     Plugin = (function() {
       function Plugin(element, options) {
@@ -48,10 +48,13 @@ http://www.opensource.org/licenses/mit-license.php
         this.itemGroupTotal = Math.ceil(this.itemCount / this.itemsToShow);
         this.itemGroupShowing = 0;
         this.showControls = this.options.navigation || this.options.pagination;
+        this.timer = null;
         this.init();
       }
 
       Plugin.prototype.init = function() {
+        var _this = this;
+
         if (!this.showControls) {
           return;
         }
@@ -73,8 +76,39 @@ http://www.opensource.org/licenses/mit-license.php
           this.heroText.hide();
         }
         if (!this.options.heroImageLink) {
-          return this.removeLink();
+          this.removeLink();
         }
+        if (this.options.autoplay) {
+          this.autoplayStart();
+          if (this.options.autoplayPauseOnHover) {
+            return this.el.on({
+              mouseenter: function() {
+                return _this.autoplayStop();
+              },
+              mouseleave: function() {
+                return _this.autoplayStart();
+              }
+            });
+          }
+        }
+      };
+
+      Plugin.prototype.autoplayStart = function() {
+        this.timer = setInterval($.proxy(this.autoplayMove, this), this.options.autoplaySpeed);
+      };
+
+      Plugin.prototype.autoplayMove = function() {
+        if (this.itemGroupShowing < (this.itemGroupTotal - 1)) {
+          this.itemGroupShowing++;
+        } else {
+          this.itemGroupShowing = 0;
+        }
+        this.updateControlsState();
+        return this.moveItems();
+      };
+
+      Plugin.prototype.autoplayStop = function() {
+        return clearTimeout(this.timer);
       };
 
       Plugin.prototype.bindEvents = function() {

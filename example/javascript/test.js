@@ -21,7 +21,8 @@ $(document).on('ready', function() {
     showHeroText: true,
     itemsToShow: 1,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    autoplayPauseOnHover: true
   });
 
   $('.heroCarousel').eq(1).heroCarousel({
@@ -36,7 +37,11 @@ $(document).on('ready', function() {
     navigation: false,
     showHeroText: false,
     heroImageLink: false,
-    itemsToShow: 1
+    itemsToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 500,
+    autoplayPauseOnHover: false,
+    counter: true
   });
 
 });
