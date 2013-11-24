@@ -3,13 +3,13 @@ SCRIPT_NAME = heroCarousel
 default:
 
 	@echo "* compiling jade templates..."
-	@jade -P ./example/index.jade
+	@jade --pretty ./example/index.jade
 
 	@echo "* compiling sass..."
 	@sass --scss --compass --style expanded ./example/sass/style.scss ./example/css/style.css
 
 	@echo "* compiling coffeescript..."
-	@coffee -p ${SCRIPT_NAME}.coffee > ${SCRIPT_NAME}.js
+	@coffee --print ${SCRIPT_NAME}.coffee > ${SCRIPT_NAME}.js
 
 	@echo "* linting coffeescript..."
 	@coffeelint ${SCRIPT_NAME}.coffee
