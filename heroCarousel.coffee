@@ -1,5 +1,6 @@
 ###!
-heroCarousel v1.0.2 (http://okize.github.com/)
+heroCarousel v1.0.2 (https://github.com/TechTarget/heroCarousel)
+Author: Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)
 Copyright (c) 2013 | Licensed under the MIT license
 http://www.opensource.org/licenses/mit-license.php
 ###
@@ -215,9 +216,11 @@ http://www.opensource.org/licenses/mit-license.php
       i = 0
 
       while i < @itemGroupTotal
-        paginationItems.push '<a href="#" class="heroCarouselPaginationButton ' +
+        paginationItems.push(
+          '<a href="#" class="heroCarouselPaginationButton ' +
           (className[i] or '') + '" data-hero-carousel-group="' + i + '">' +
           (i + 1) + '</a>'
+        )
         i++
 
       pagination = $('<span/>',
@@ -280,7 +283,7 @@ http://www.opensource.org/licenses/mit-license.php
     # removes the link that wraps the hero image
     removeLink: ->
 
-      @heroImage.find('img').unwrap('a');
+      @heroImage.find('img').unwrap('a')
 
 
   # wrapper around the constructor that prevents multiple instantiations
