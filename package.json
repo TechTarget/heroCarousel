@@ -1,8 +1,13 @@
 {
   "name": "heroCarousel",
-  "main": "heroCarousel",
+  "private": true,
+  "main": "heroCarousel.js",
   "description": "jQuery plugin for hero-image carousel",
   "version": "1.0.2",
   "author": "Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechTarget/heroCarousel"
+  },
   "license": "MIT"
 }
